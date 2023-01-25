@@ -4,15 +4,15 @@
 
   tasks:
 
-  # - name: Update
-  #   ansible.builtin.apt:
-  #     update_cache: yes
-  #   become: yes
+  - name: Update
+    ansible.builtin.apt:
+      update_cache: yes
+    become: yes
 
-  # - name: Upgrade    
-  #   ansible.builtin.apt:
-  #     upgrade: dist
-  #   become: yes
+  - name: Upgrade    
+    ansible.builtin.apt:
+      upgrade: dist
+    become: yes
 
   - name: Run OCS Inventory
     ansible.builtin.command: ocsinventory-agent --server=http://ocs.rentcars.lan/ocsinventory
